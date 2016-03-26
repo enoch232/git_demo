@@ -1,0 +1,10 @@
+<h1>To do list</h1>
+
+<% @posts.each do |post| %>
+<div style = "border-style:outset">
+<div style = "background-color:grey;color:white"><h2><%= post.title %></h2></div>
+<div style = "color:black"><h4><%= truncate(post.body, :length => 30) %></h4></div>
+<h5><%= link_to "read more", post %></h5>
+
+</div>
+<% end %>

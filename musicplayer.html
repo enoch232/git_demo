@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#pButton{
+	height:50px; 
+	width: 50px;
+	border: none;
+	background-size: 50% 50%;
+	background-position: center;
+}
+.play{background: url('play.png') no-repeat;}
+.pause{background: url('pause.png') no-repeat;}
+
+
+</style>
+
+
+ 
+
+</head>
+<body>
+
+
+<audio id="music" preload = "true">
+  <source src="Troyboi - Afterhours.ogg" type="audio/ogg" />
+  <source src="Troyboi - Afterhours.mp3" type="audio/mpeg" />
+</audio>
+
+
+
+
+<button id="pButton" class="play" onclick="playAudio()"></button>
+
+
+
+
+</body>
+<script>
+var music = document.getElementById('music');
+
+ 
+function playAudio() {
+	if (music.paused) {
+		music.play();
+		pButton.className = "";
+		pButton.className = "pause";
+	} else { 
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+	}
+}
+
+
+</script>
+</html>
